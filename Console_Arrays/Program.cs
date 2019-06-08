@@ -30,24 +30,35 @@ namespace Console_Arrays
             //}
 
 
-            //--------------- Multidimensional Arrays (2D)
+            //--------------- Multidimensional Arrays (2D)        -- 1th method
 
-            int[,] Array2D1 = new int[3, 2];   //First Sturcture  --> row:3 Col:2
-            Array2D1[0, 0]= 0;   // Assign row1 and col1
-            Array2D1[0, 1] = 1;  // Assign row1 and col2
-            Array2D1[1, 0] = 10; // Assign row2 and col1
-            Array2D1[1, 1] = 11; // Assign row2 and col2
-            Array2D1[2, 0] = 20; // Assign row3 and col1
-            Array2D1[2, 1] = 21; // Assign row3 and col2
+            //int[,] Array2D1 = new int[3, 2];   //First Sturcture  --> row:3 Col:2
+            //Array2D1[0, 0]= 0;   // Assign row1 and col1
+            //Array2D1[0, 1] = 1;  // Assign row1 and col2
+            //Array2D1[1, 0] = 10; // Assign row2 and col1
+            //Array2D1[1, 1] = 11; // Assign row2 and col2
+            //Array2D1[2, 0] = 20; // Assign row3 and col1
+            //Array2D1[2, 1] = 21; // Assign row3 and col2
 
-            for (int i=0; i<3;i++)  //Surfe Rows
-            {
-                for (int j=0; j<2; j++)  //Surfe Columnss
-                    Console.Write(Array2D1[i,j]+" ");
-                Console.WriteLine();
-            }         
+            //for (int i=0; i<3;i++)  //Surfe Rows
+            //{
+            //    for (int j=0; j<2; j++)  //Surfe Columnss
+            //        Console.Write(Array2D1[i,j]+" ");
+            //    Console.WriteLine();
+            //}         
 
-            Console.ReadKey();
+
+
+            //--------------- Multidimensional Arrays (2D)        -- 2th method
+
+            int[,] Array2D2 = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } }; //Second Sturcture  --> row:3 Col:2
+
+            for(int i=0; i<Array2D2.GetLength(0); i++)    // Array2D2.GetLength(0) -> give us the row's Number
+                for (int j=0;j<Array2D2.GetLength(1);j++) // Array2D2.GetLength(1) -> give us the column's Number
+                  Console.Write(Array2D2[i,j]+" ");
+                  Console.WriteLine();
+
+                  Console.ReadKey();
         }
     }
 }
